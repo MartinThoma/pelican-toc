@@ -1,5 +1,3 @@
-from io import open
-
 import unittest
 import re
 import toc
@@ -29,7 +27,7 @@ class TestToCGeneration(unittest.TestCase):
         result = self._handle_article_generation(article_path)
         toc.generate_toc(result)
         expected = ""
-        with open(expected_path, "r") as f:
+        with open(expected_path) as f:
             expected = f.read()
         return result, expected
 

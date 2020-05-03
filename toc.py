@@ -5,7 +5,6 @@ toc
 This plugin generates tocs for pages and articles.
 """
 
-from __future__ import unicode_literals
 
 import logging
 import re
@@ -37,7 +36,7 @@ def unique(id, ids):
 
 
 @python_2_unicode_compatible
-class HtmlTreeNode(object):
+class HtmlTreeNode:
     def __init__(self, parent, header, level, id):
         self.children = []
         self.parent = parent
@@ -86,10 +85,10 @@ class HtmlTreeNode(object):
             )
 
         if self.level != "h0":
-            ret = "<li>{}</li>".format(ret)
+            ret = f"<li>{ret}</li>"
 
         if not self.parent:
-            ret = "<div id='toc'>{}</div>".format(ret)
+            ret = f"<div id='toc'>{ret}</div>"
 
         return ret
 
@@ -135,7 +134,7 @@ def generate_toc(content):
         header.replaceWith(new_header)  # to get our ids back into soup
 
     if settoc:
-        tree_string = "{}".format(tree)
+        tree_string = f"{tree}"
         tree_soup = BeautifulSoup(tree_string, "html.parser")
         content.toc = tree_soup.decode(formatter="html")
     content._content = soup.decode(formatter="html")
