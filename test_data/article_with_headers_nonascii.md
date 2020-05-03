@@ -12,4 +12,3 @@ traditional chinese magic
 ###αποτέλεσμα
 
 greek result
-

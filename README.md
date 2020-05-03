@@ -61,6 +61,4 @@ Just use the respective keyword as metadata (example: `toc_headers: ^h[1-4]`)
 #Differences between pelican-toc and pelican-extract-toc
 `extract-toc` uses a markdown extension to generate a toc and then extract it via beautifulsoup.
 This extension generates the toc itself, removing the need to write `[ToC]` in your articles.
-There also is a 'health' check on id's which should be generated via markdown.extensions.headerid per default, but somehow don't always end up in the output. 
-
-
+There also is a 'health' check on id's which should be generated via markdown.extensions.headerid per default, but somehow don't always end up in the output.

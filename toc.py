@@ -6,20 +6,18 @@ This plugin generates tocs for pages and articles.
 """
 
 
+# Core Library modules
 import logging
 import re
 
+# Third party modules
 from bs4 import BeautifulSoup, Comment
-
 from pelican import contents, signals
 from pelican.utils import python_2_unicode_compatible, slugify
 
-
 logger = logging.getLogger(__name__)
 
-"""
-https://github.com/waylan/Python-Markdown/blob/master/markdown/extensions/headerid.py
-"""
+# https://github.com/waylan/Python-Markdown/blob/master/markdown/extensions/headerid.py
 IDCOUNT_RE = re.compile(r"^(.*)_([0-9]+)$")
 
 

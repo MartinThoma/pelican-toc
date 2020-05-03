@@ -9,4 +9,3 @@ an article with headers
 ###Magic
 
 ###Result
-

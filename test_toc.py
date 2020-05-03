@@ -1,10 +1,14 @@
-import unittest
+# Core Library modules
 import re
-import toc
+import unittest
 
-from pelican.readers import MarkdownReader
+# Third party modules
 from pelican.contents import Article
+from pelican.readers import MarkdownReader
 from pelican.tests.support import get_settings
+
+# First party modules
+import toc
 
 
 class TestToCGeneration(unittest.TestCase):
